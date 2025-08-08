@@ -270,4 +270,4 @@ status-website:
       href: https://support.thehouserapp.com  # Your support page
     
   # Optional: Custom theme
-  theme: light  # or "dark"
+  theme: dark  # or "light"
