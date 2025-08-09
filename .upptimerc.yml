@@ -43,9 +43,13 @@ sites:
 
   # ==== PROPERTIES ====
   - name: Prod - GET /getAllProperties
-    url: https://api.thehouserapp.com/getAllProperties
+    url: https://api.thehouserapp.com/getAllProperties?minLatitude=33.0000&minLongitude=-97.0000&maxLatitude=33.0100&maxLongitude=-96.9900&pageSize=1
+    expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
+    maxResponseTime: 15000
   - name: Staging - GET /getAllProperties
-    url: http://54.162.155.98:3001/getAllProperties
+    url: http://54.162.155.98:3001/getAllProperties?minLatitude=33.0000&minLongitude=-97.0000&maxLatitude=33.0100&maxLongitude=-96.9900&pageSize=1
+    expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
+    maxResponseTime: 15000
 
   - name: Prod - GET /PlanpoProperties
     url: https://api.thehouserapp.com/PlanpoProperties
@@ -81,14 +85,20 @@ sites:
     expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
 
   - name: Prod - GET /getPropertiesByAddress
-    url: https://api.thehouserapp.com/getPropertiesByAddress
+    url: https://api.thehouserapp.com/getPropertiesByAddress?address=123%20Main%20St
+    expectedStatusCodes: [200, 201, 204, 400, 404]
   - name: Staging - GET /getPropertiesByAddress
-    url: http://54.162.155.98:3001/getPropertiesByAddress
+    url: http://54.162.155.98:3001/getPropertiesByAddress?address=123%20Main%20St
+    expectedStatusCodes: [200, 201, 204, 400, 404]
 
   - name: Prod - GET /properties/filterByCityAndZip
-    url: https://api.thehouserapp.com/properties/filterByCityAndZip
+    url: https://api.thehouserapp.com/properties/filterByCityAndZip?city=Plano
+    expectedStatusCodes: [200, 201, 204, 400, 404]
+    maxResponseTime: 15000
   - name: Staging - GET /properties/filterByCityAndZip
-    url: http://54.162.155.98:3001/properties/filterByCityAndZip
+    url: http://54.162.155.98:3001/properties/filterByCityAndZip?city=Plano
+    expectedStatusCodes: [200, 201, 204, 400, 404]
+    maxResponseTime: 15000
 
   - name: Prod - GET /properties/basicFilters
     url: https://api.thehouserapp.com/properties/basicFilters
