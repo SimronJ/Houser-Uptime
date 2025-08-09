@@ -254,190 +254,141 @@ status-website:
   introMessage: |
       Real-time monitoring of our production and staging APIs, plus key integrations.
 
-      <details open>
-        <summary><strong>📖 Legend</strong></summary>
+      ### Legend
+      - 🟢 Prod — `https://api.thehouserapp.com`
+      - 🧪 Stage — `http://54.162.155.98:3001`
+      - 🔒 Auth required (401/403 responses are considered healthy)
+      - 📎 File upload
+      - 🔁 Streaming (SSE)
+      - 🔌 WebSocket (not actively monitored by this page)
 
-        - 🟢 Prod — `https://api.thehouserapp.com`
-        - 🧪 Stage — `http://54.162.155.98:3001`
-        - 🔒 Auth required (401/403 responses are considered healthy)
-        - 📎 File upload
-        - 🔁 Streaming (SSE)
-        - 🔌 WebSocket (not actively monitored by this page)
-      </details>
+      ### Endpoint Directory
+      This is a human-friendly map of endpoints. Monitoring checks may cover a subset; a 400/401/403 for protected or body-required routes is expected and counted as up when configured.
 
-      <span id="endpoint-directory"></span>
-      <details>
-        <summary><strong>📚 Endpoint Directory</strong> — click to expand</summary>
+      #### User & Auth
+      - GET `/user-roles`
+      - GET `/user-subscription` 🔒
+      - GET `/user-subscription-history` 🔒
+      - POST `/generate-otp/:userId`
+      - POST `/request-otp`
+      - POST `/verify-otp`
+      - POST `/register`
+      - POST `/login`
+      - POST `/guest-login`
+      - POST `/auth/google`
+      - POST `/reset-password`
+      - POST `/user`
+      - POST `/checkUser`
+      - POST `/update-password`
+      - POST `/update-email`
+      - GET `/user-profile` 🔒
+      - DELETE `/user-profile/:id` 🔒
+      - PATCH `/user-profile/:id/enable` 🔒
 
-        <p>This is a human-friendly map of endpoints. Monitoring checks may cover a subset; a 400/401/403 for protected or body-required routes is expected and counted as up when configured.</p>
+      #### Admin
+      - POST `/admin-login`
+      - POST `/register-admin`
 
-        <details>
-          <summary>👤 User & Auth</summary>
+      #### Clients & User Management
+      - GET `/clients`
+      - PATCH `/user/:id`
+      - PATCH `/user` 🔒
+      - DELETE `/user/:id`
+      - GET `/user/:id`
 
-          - GET `/user-roles`
-          - GET `/user-subscription` 🔒
-          - GET `/user-subscription-history` 🔒
-          - POST `/generate-otp/:userId`
-          - POST `/request-otp`
-          - POST `/verify-otp`
-          - POST `/register`
-          - POST `/login`
-          - POST `/guest-login`
-          - POST `/auth/google`
-          - POST `/reset-password`
-          - POST `/user`
-          - POST `/checkUser`
-          - POST `/update-password`
-          - POST `/update-email`
-          - GET `/user-profile` 🔒
-          - DELETE `/user-profile/:id` 🔒
-          - PATCH `/user-profile/:id/enable` 🔒
-        </details>
+      #### Properties
+      - GET `/getAllProperties`
+      - GET `/PlanpoProperties`
+      - GET `/getAllPropertiesCoordinates` 🔒
+      - GET `/properties/by-polygon` 🔒 📎
+      - GET `/propertyById/:id` 🔒
+      - GET `/property/:id` 🔒
+      - POST `/createProperty`
+      - PUT `/updateProperty/:id`
+      - DELETE `/deleteProperty/:id`
+      - GET `/getPropertiesByAddress`
+      - PUT `/updateStripeCustomerId` 🔒
+      - GET `/properties/filterByCityAndZip`
+      - GET `/properties/basicFilters`
+      - GET `/properties/cashflow/:id`
+      - GET `/properties/firstTimeHomeBuyer/:id`
+      - GET `/properties/fixAndFlip/:id`
+      - GET `/properties/house-hack/:id`
 
-        <details>
-          <summary>🛠️ Admin</summary>
+      #### Property Questionnaires
+      - GET `/property-questionnaires` 🔒
+      - GET `/property-questionnaires/:id` 🔒
+      - GET `/property-questionnaires/prefilled/:id` 🔒
+      - POST `/property-questionnaires` 🔒 📎
+      - PATCH `/property-questionnaires/:id` 🔒 📎
+      - DELETE `/property-questionnaires/:id` 🔒
 
-          - POST `/admin-login`
-          - POST `/register-admin`
-        </details>
+      #### Onboarding Questionnaire
+      - GET `/questionnaire` 🔒
+      - GET `/questions` 🔒
+      - POST `/questionnaire` 🔒 📎
+      - PATCH `/questionnaire` 🔒 📎
+      - DELETE `/questionnaire` 🔒
 
-        <details>
-          <summary>👥 Clients & User Management</summary>
+      #### User Liked Properties
+      - POST `/user-likes` 🔒
+      - DELETE `/user-likes/:id` 🔒
+      - PUT `/user-likes/:id` 🔒
+      - GET `/user-likes` 🔒
 
-          - GET `/clients`
-          - PATCH `/user/:id`
-          - PATCH `/user` 🔒
-          - DELETE `/user/:id`
-          - GET `/user/:id`
-        </details>
+      #### Buy House
+      - POST `/buy-house` 🔒
+      - PUT `/buy-house/:id` 🔒
+      - DELETE `/buy-house/:id` 🔒
+      - GET `/buy-house` 🔒
 
-        <details>
-          <summary>🏠 Properties</summary>
+      #### Buy Property
+      - POST `/buy-property` 🔒
+      - GET `/buy-property` 🔒
+      - GET `/buy-property/:id` 🔒
+      - PUT `/buy-property/:id` 🔒
+      - DELETE `/buy-property/:id` 🔒
 
-          - GET `/getAllProperties`
-          - GET `/PlanpoProperties`
-          - GET `/getAllPropertiesCoordinates` 🔒
-          - GET `/properties/by-polygon` 🔒 📎
-          - GET `/propertyById/:id` 🔒
-          - GET `/property/:id` 🔒
-          - POST `/createProperty`
-          - PUT `/updateProperty/:id`
-          - DELETE `/deleteProperty/:id`
-          - GET `/getPropertiesByAddress`
-          - PUT `/updateStripeCustomerId` 🔒
-          - GET `/properties/filterByCityAndZip`
-          - GET `/properties/basicFilters`
-          - GET `/properties/cashflow/:id`
-          - GET `/properties/firstTimeHomeBuyer/:id`
-          - GET `/properties/fixAndFlip/:id`
-          - GET `/properties/house-hack/:id`
-        </details>
+      #### Showings / Request Tour
+      - GET `/showings` 🔒
+      - POST `/showings` 🔒
+      - GET `/showings/:id` 🔒
+      - PUT `/showings/:id` 🔒 (cancel)
+      - POST `/reschedule-showing` 🔒
+      - POST `/updateRequestTourWebhook`
+      - POST `/showing-message` 🔒
 
-        <details>
-          <summary>📝 Property Questionnaires</summary>
+      #### AI Assistant
+      - POST `/ai-assistant` 🔒 📎
+      - POST `/aiconversation` 🔒 📎 🔁
+      - WebSocket (Prod): `wss://api.thehouserapp.com/?token=YOUR_JWT` (not monitored here)
+      - WebSocket (Stage): `ws://54.162.155.98:3001/?token=YOUR_JWT` (not monitored here)
 
-          - GET `/property-questionnaires` 🔒
-          - GET `/property-questionnaires/:id` 🔒
-          - GET `/property-questionnaires/prefilled/:id` 🔒
-          - POST `/property-questionnaires` 🔒 📎
-          - PATCH `/property-questionnaires/:id` 🔒 📎
-          - DELETE `/property-questionnaires/:id` 🔒
-        </details>
+      #### Audio
+      - POST `/audio` 📎
+      - GET `/signedaudio`
 
-        <details>
-          <summary>🧭 Onboarding Questionnaire</summary>
+      #### Stripe / Billing
+      - POST `/stripe/webhook` (Stripe only; expects raw body)
+      - POST `/stripe/checkout-session` 🔒
+      - POST `/stripe/downgrade` 🔒
+      - GET `/credits` 🔒
+      - POST `/credits` 🔒
+      - POST `/credits/deduct` 🔒
+      - POST `/stripe/customer-portal` 🔒
+      - GET `/subscription-plans` 🔒
+      - POST `/:userId/account`
+      - POST `/:userId/account/payment`
+      - GET `/:userId/paymentMethods`
+      - DELETE `/:userId/paymentMethods/:paymentMethodId`
+      - GET `/:userId/customer/session`
+      - GET `/:userId/customer/subscriptions`
+      - POST `/:userId/account/setupPayment`
+      - PUT `/updateStripeCustomerId`
 
-          - GET `/questionnaire` 🔒
-          - GET `/questions` 🔒
-          - POST `/questionnaire` 🔒 📎
-          - PATCH `/questionnaire` 🔒 📎
-          - DELETE `/questionnaire` 🔒
-        </details>
-
-        <details>
-          <summary>❤️ User Liked Properties</summary>
-
-          - POST `/user-likes` 🔒
-          - DELETE `/user-likes/:id` 🔒
-          - PUT `/user-likes/:id` 🔒
-          - GET `/user-likes` 🔒
-        </details>
-
-        <details>
-          <summary>🏡 Buy House</summary>
-
-          - POST `/buy-house` 🔒
-          - PUT `/buy-house/:id` 🔒
-          - DELETE `/buy-house/:id` 🔒
-          - GET `/buy-house` 🔒
-        </details>
-
-        <details>
-          <summary>🏢 Buy Property</summary>
-
-          - POST `/buy-property` 🔒
-          - GET `/buy-property` 🔒
-          - GET `/buy-property/:id` 🔒
-          - PUT `/buy-property/:id` 🔒
-          - DELETE `/buy-property/:id` 🔒
-        </details>
-
-        <details>
-          <summary>📅 Showings / Request Tour</summary>
-
-          - GET `/showings` 🔒
-          - POST `/showings` 🔒
-          - GET `/showings/:id` 🔒
-          - PUT `/showings/:id` 🔒 (cancel)
-          - POST `/reschedule-showing` 🔒
-          - POST `/updateRequestTourWebhook`
-          - POST `/showing-message` 🔒
-        </details>
-
-        <details>
-          <summary>🤖 AI Assistant</summary>
-
-          - POST `/ai-assistant` 🔒 📎
-          - POST `/aiconversation` 🔒 📎 🔁
-          - WebSocket (Prod): `wss://api.thehouserapp.com/?token=YOUR_JWT` (not monitored here)
-          - WebSocket (Stage): `ws://54.162.155.98:3001/?token=YOUR_JWT` (not monitored here)
-        </details>
-
-        <details>
-          <summary>🎧 Audio</summary>
-
-          - POST `/audio` 📎
-          - GET `/signedaudio`
-        </details>
-
-        <details>
-          <summary>💳 Stripe / Billing</summary>
-
-          - POST `/stripe/webhook` (Stripe only; expects raw body)
-          - POST `/stripe/checkout-session` 🔒
-          - POST `/stripe/downgrade` 🔒
-          - GET `/credits` 🔒
-          - POST `/credits` 🔒
-          - POST `/credits/deduct` 🔒
-          - POST `/stripe/customer-portal` 🔒
-          - GET `/subscription-plans` 🔒
-          - POST `/:userId/account`
-          - POST `/:userId/account/payment`
-          - GET `/:userId/paymentMethods`
-          - DELETE `/:userId/paymentMethods/:paymentMethodId`
-          - GET `/:userId/customer/session`
-          - GET `/:userId/customer/subscriptions`
-          - POST `/:userId/account/setupPayment`
-          - PUT `/updateStripeCustomerId`
-        </details>
-
-        <details>
-          <summary>🔍 Queries</summary>
-
-          - POST `/createQuery`
-          - GET `/getQueries`
-        </details>
-      </details>
+      #### Queries
+      - POST `/createQuery`
+      - GET `/getQueries`
   
   # Add navigation links:
   navbar:
