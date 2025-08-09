@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/filterByCityAndZip
 status: down
 code: 400
-responseTime: 5
-lastUpdated: 2025-08-08T19:17:56.644Z
+responseTime: 21
+lastUpdated: 2025-08-08T23:18:52.912Z
 startTime: 2025-08-08T18:48:44.997Z
 generator: Upptime <https://github.com/upptime/upptime>
