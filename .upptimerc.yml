@@ -262,7 +262,10 @@ status-website:
       - 🔁 Streaming (SSE)
       - 🔌 WebSocket (not actively monitored by this page)
 
-      ### Endpoint Directory
+      <a id="endpoint-directory"></a>
+      <details>
+      <summary>Endpoint Directory</summary>
+      
       This is a human-friendly map of endpoints. Monitoring checks may cover a subset; a 400/401/403 for protected or body-required routes is expected and counted as up when configured.
 
       #### User & Auth
@@ -389,6 +392,8 @@ status-website:
       #### Queries
       - POST `/createQuery`
       - GET `/getQueries`
+      
+      </details>
   
   # Add navigation links:
   navbar:
