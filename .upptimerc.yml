@@ -249,7 +249,7 @@ status-website:
   name: Houser API Status
   
   # Add these for better branding:
-  logoUrl: https://yourcompany.com/logo.png  # Optional: your company logo
+  logoUrl: https://www.thehouserapp.com/assets/logo-BAmIMfWe.svg  # Optional: your company logo
   introTitle: "**Houser App** System Status"
   introMessage: |
       Real-time monitoring of our production and staging APIs, plus key integrations.
@@ -265,7 +265,11 @@ status-website:
       ### Endpoint Directory
       This is a human-friendly map of endpoints. Monitoring checks may cover a subset; a 400/401/403 for protected or body-required routes is expected and counted as up when configured.
 
-      #### User & Auth
+      Quick links: [User & Auth](#user-auth) · [Admin](#admin) · [Clients](#clients) · [Properties](#properties) · [Property Questionnaires](#property-questionnaires) · [Onboarding](#onboarding) · [Likes](#likes) · [Buy House](#buy-house) · [Buy Property](#buy-property) · [Showings](#showings) · [AI](#ai) · [Audio](#audio) · [Billing](#billing) · [Queries](#queries)
+
+      <details>
+      <summary id="user-auth"><strong>User & Auth</strong></summary>
+
       - GET `/user-roles`
       - GET `/user-subscription` 🔒
       - GET `/user-subscription-history` 🔒
@@ -284,19 +288,28 @@ status-website:
       - GET `/user-profile` 🔒
       - DELETE `/user-profile/:id` 🔒
       - PATCH `/user-profile/:id/enable` 🔒
+      </details>
 
-      #### Admin
+      <details>
+      <summary id="admin"><strong>Admin</strong></summary>
+
       - POST `/admin-login`
       - POST `/register-admin`
+      </details>
 
-      #### Clients & User Management
+      <details>
+      <summary id="clients"><strong>Clients & User Management</strong></summary>
+
       - GET `/clients`
       - PATCH `/user/:id`
       - PATCH `/user` 🔒
       - DELETE `/user/:id`
       - GET `/user/:id`
+      </details>
 
-      #### Properties
+      <details>
+      <summary id="properties"><strong>Properties</strong></summary>
+
       - GET `/getAllProperties`
       - GET `/PlanpoProperties`
       - GET `/getAllPropertiesCoordinates` 🔒
@@ -314,42 +327,60 @@ status-website:
       - GET `/properties/firstTimeHomeBuyer/:id`
       - GET `/properties/fixAndFlip/:id`
       - GET `/properties/house-hack/:id`
+      </details>
 
-      #### Property Questionnaires
+      <details>
+      <summary id="property-questionnaires"><strong>Property Questionnaires</strong></summary>
+
       - GET `/property-questionnaires` 🔒
       - GET `/property-questionnaires/:id` 🔒
       - GET `/property-questionnaires/prefilled/:id` 🔒
       - POST `/property-questionnaires` 🔒 📎
       - PATCH `/property-questionnaires/:id` 🔒 📎
       - DELETE `/property-questionnaires/:id` 🔒
+      </details>
 
-      #### Onboarding Questionnaire
+      <details>
+      <summary id="onboarding"><strong>Onboarding Questionnaire</strong></summary>
+
       - GET `/questionnaire` 🔒
       - GET `/questions` 🔒
       - POST `/questionnaire` 🔒 📎
       - PATCH `/questionnaire` 🔒 📎
       - DELETE `/questionnaire` 🔒
+      </details>
 
-      #### User Liked Properties
+      <details>
+      <summary id="likes"><strong>User Liked Properties</strong></summary>
+
       - POST `/user-likes` 🔒
       - DELETE `/user-likes/:id` 🔒
       - PUT `/user-likes/:id` 🔒
       - GET `/user-likes` 🔒
+      </details>
 
-      #### Buy House
+      <details>
+      <summary id="buy-house"><strong>Buy House</strong></summary>
+
       - POST `/buy-house` 🔒
       - PUT `/buy-house/:id` 🔒
       - DELETE `/buy-house/:id` 🔒
       - GET `/buy-house` 🔒
+      </details>
 
-      #### Buy Property
+      <details>
+      <summary id="buy-property"><strong>Buy Property</strong></summary>
+
       - POST `/buy-property` 🔒
       - GET `/buy-property` 🔒
       - GET `/buy-property/:id` 🔒
       - PUT `/buy-property/:id` 🔒
       - DELETE `/buy-property/:id` 🔒
+      </details>
 
-      #### Showings / Request Tour
+      <details>
+      <summary id="showings"><strong>Showings / Request Tour</strong></summary>
+
       - GET `/showings` 🔒
       - POST `/showings` 🔒
       - GET `/showings/:id` 🔒
@@ -357,18 +388,27 @@ status-website:
       - POST `/reschedule-showing` 🔒
       - POST `/updateRequestTourWebhook`
       - POST `/showing-message` 🔒
+      </details>
 
-      #### AI Assistant
+      <details>
+      <summary id="ai"><strong>AI Assistant</strong></summary>
+
       - POST `/ai-assistant` 🔒 📎
       - POST `/aiconversation` 🔒 📎 🔁
       - WebSocket (Prod): `wss://api.thehouserapp.com/?token=YOUR_JWT` (not monitored here)
       - WebSocket (Stage): `ws://54.162.155.98:3001/?token=YOUR_JWT` (not monitored here)
+      </details>
 
-      #### Audio
+      <details>
+      <summary id="audio"><strong>Audio</strong></summary>
+
       - POST `/audio` 📎
       - GET `/signedaudio`
+      </details>
 
-      #### Stripe / Billing
+      <details>
+      <summary id="billing"><strong>Stripe / Billing</strong></summary>
+
       - POST `/stripe/webhook` (Stripe only; expects raw body)
       - POST `/stripe/checkout-session` 🔒
       - POST `/stripe/downgrade` 🔒
@@ -385,10 +425,14 @@ status-website:
       - GET `/:userId/customer/subscriptions`
       - POST `/:userId/account/setupPayment`
       - PUT `/updateStripeCustomerId`
+      </details>
 
-      #### Queries
+      <details>
+      <summary id="queries"><strong>Queries</strong></summary>
+
       - POST `/createQuery`
       - GET `/getQueries`
+      </details>
   
   # Add navigation links:
   navbar:

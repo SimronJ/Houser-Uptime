@@ -15,4 +15,89 @@
             );
           });
         }
-      } catch (error) {} </script> 
+      } catch (error) {} </script>
+<script>
+  (function () {
+    function onReady(fn) {
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(fn, 0);
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    onReady(function () {
+      // Update logo to Houser brand
+      var logoImg = document.querySelector('nav img');
+      if (logoImg) {
+        logoImg.src = 'https://www.thehouserapp.com/assets/logo-BAmIMfWe.svg';
+      }
+
+      // Make Endpoint Directory collapsible
+      try {
+        var header = document.querySelector('main header');
+        if (header) {
+          var endpointH3 = Array.from(header.querySelectorAll('h3')).find(function (h3) {
+            return (h3.textContent || '').toLowerCase().indexOf('endpoint directory') !== -1;
+          });
+          if (endpointH3) {
+            endpointH3.id = 'endpoint-directory';
+          }
+
+          var h4s = Array.from(header.querySelectorAll('h4'));
+          h4s.forEach(function (h4) {
+            var next = h4.nextElementSibling;
+            if (!next || next.tagName.toLowerCase() !== 'ul') return;
+            var details = document.createElement('details');
+            details.className = 'endpoint-group';
+            var summary = document.createElement('summary');
+            summary.textContent = h4.textContent || '';
+            details.appendChild(summary);
+            details.appendChild(next);
+            h4.parentNode.insertBefore(details, h4);
+            h4.remove();
+          });
+        }
+      } catch (e) {}
+
+      // Environment filter for live status
+      try {
+        var liveStatusHeader = Array.from(document.querySelectorAll('h2')).find(function (h2) {
+          return (h2.textContent || '').trim().toLowerCase() === 'live status';
+        });
+        if (liveStatusHeader) {
+          var filterBar = document.createElement('div');
+          filterBar.className = 'env-filter';
+          filterBar.innerHTML = '\n            <label><input type="checkbox" id="filter-prod" checked> Prod</label>\n            <label style="margin-left:0.75rem"><input type="checkbox" id="filter-stage" checked> Stage</label>\n          ';
+          liveStatusHeader.parentNode.insertBefore(filterBar, liveStatusHeader.nextSibling);
+
+          var prodCb = filterBar.querySelector('#filter-prod');
+          var stageCb = filterBar.querySelector('#filter-stage');
+
+          function applyEnvFilter() {
+            var showProd = prodCb.checked;
+            var showStage = stageCb.checked;
+            document.querySelectorAll('article').forEach(function (card) {
+              var text = card.textContent || '';
+              var isProd = text.indexOf('Prod -') !== -1;
+              var isStage = text.indexOf('Staging -') !== -1;
+              var visible = true;
+              if (isProd && !showProd) visible = false;
+              if (isStage && !showStage) visible = false;
+              card.style.display = visible ? '' : 'none';
+            });
+          }
+
+          prodCb.addEventListener('change', applyEnvFilter);
+          stageCb.addEventListener('change', applyEnvFilter);
+
+          // Re-apply when Upptime injects/updates cards
+          var liveSection = document.querySelector('section.live-status') || document.body;
+          var mo = new MutationObserver(function () { applyEnvFilter(); });
+          mo.observe(liveSection, { childList: true, subtree: true });
+          applyEnvFilter();
+        }
+      } catch (e) {}
+    });
+  })();
+</script>

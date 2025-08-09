@@ -1,0 +1,15 @@
+{
+  "name": "houser-uptime-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local preview server for Houser Upptime status site",
+  "license": "MIT",
+  "scripts": {
+    "start:local": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+
+

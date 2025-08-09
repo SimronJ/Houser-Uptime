@@ -109,6 +109,13 @@ nav {
   border-bottom: 1px solid;
 }
 
+/* Make the navbar sticky for easier navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 [aria-current] {
   border-bottom: 2px solid;
 }
@@ -200,4 +207,34 @@ a.error-button {
 article .graph {
   opacity: var(--graph-opacity);
   filter: var(--graph-filter);
+}
+
+/* Collapsible Endpoint Directory styling */
+details.endpoint-group {
+  margin: 0.25rem 0;
+  border: 1px solid var(--card-border-color);
+  border-radius: 4px;
+  background: var(--card-background-color);
+}
+details.endpoint-group > summary {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  list-style: none;
+}
+details.endpoint-group[open] > summary {
+  border-bottom: 1px solid var(--card-border-color);
+}
+details.endpoint-group > ul {
+  margin: 0;
+  padding: 0.5rem 1rem 0.75rem;
+}
+
+/* Environment filter bar */
+.env-filter {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.95rem;
+}
+.env-filter input[type="checkbox"] {
+  transform: translateY(1px);
 }
