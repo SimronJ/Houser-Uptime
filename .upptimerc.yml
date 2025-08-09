@@ -30,9 +30,13 @@ sites:
     expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404, 405]
 
   - name: Prod - GET /clients
-    url: https://api.thehouserapp.com/clients
+    url: https://api.thehouserapp.com/clients?page=1&limit=1
+    expectedStatusCodes: [200]
+    maxResponseTime: 15000
   - name: Staging - GET /clients
-    url: http://54.162.155.98:3001/clients
+    url: http://54.162.155.98:3001/clients?page=1&limit=1
+    expectedStatusCodes: [200]
+    maxResponseTime: 15000
 
   - name: Prod - GET /user/1
     url: https://api.thehouserapp.com/user/1
@@ -231,27 +235,6 @@ sites:
     url: http://54.162.155.98:3001/subscription-plans
     expectedStatusCodes: [200, 201, 204, 400, 401]
 
-  - name: Prod - GET /1/paymentMethods
-    url: https://api.thehouserapp.com/1/paymentMethods
-    expectedStatusCodes: [200, 201, 204, 400, 401, 404]
-  - name: Staging - GET /1/paymentMethods
-    url: http://54.162.155.98:3001/1/paymentMethods
-    expectedStatusCodes: [200, 201, 204, 400, 401, 404]
-
-  - name: Prod - GET /1/customer/session
-    url: https://api.thehouserapp.com/1/customer/session
-    expectedStatusCodes: [200, 201, 204, 400, 401, 404]
-  - name: Staging - GET /1/customer/session
-    url: http://54.162.155.98:3001/1/customer/session
-    expectedStatusCodes: [200, 201, 204, 400, 401, 404]
-
-  - name: Prod - GET /1/customer/subscriptions
-    url: https://api.thehouserapp.com/1/customer/subscriptions
-    expectedStatusCodes: [200, 201, 204, 400, 401, 404]
-  - name: Staging - GET /1/customer/subscriptions
-    url: http://54.162.155.98:3001/1/customer/subscriptions
-    expectedStatusCodes: [200, 201, 204, 400, 401, 404]
-
   # ==== QUERIES ====
   - name: Prod - GET /getQueries
     url: https://api.thehouserapp.com/getQueries
@@ -264,16 +247,155 @@ workflowSchedule:
 status-website:
   baseUrl: /Houser-Uptime
   name: Houser API Status
-  
-  # Add these for better branding:
-  logoUrl: https://yourcompany.com/logo.png  # Optional: your company logo
-  introTitle: "**Houser App** System Status"
-  introMessage: "Real-time monitoring of our production and staging APIs"
+    
+    # Add these for better branding:
+    logoUrl: https://yourcompany.com/logo.png  # Optional: your company logo
+    introTitle: "**Houser App** System Status"
+    introMessage: |
+      Real-time monitoring of our production and staging APIs, plus key integrations.
+
+      ### Legend
+      - 🟢 Prod — `https://api.thehouserapp.com`
+      - 🧪 Stage — `http://54.162.155.98:3001`
+      - 🔒 Auth required (401/403 responses are considered healthy)
+      - 📎 File upload
+      - 🔁 Streaming (SSE)
+      - 🔌 WebSocket (not actively monitored by this page)
+
+      ### Endpoint Directory
+      This is a human-friendly map of endpoints. Monitoring checks may cover a subset; a 400/401/403 for protected or body-required routes is expected and counted as up when configured.
+
+      #### User & Auth
+      - GET `/user-roles`
+      - GET `/user-subscription` 🔒
+      - GET `/user-subscription-history` 🔒
+      - POST `/generate-otp/:userId`
+      - POST `/request-otp`
+      - POST `/verify-otp`
+      - POST `/register`
+      - POST `/login`
+      - POST `/guest-login`
+      - POST `/auth/google`
+      - POST `/reset-password`
+      - POST `/user`
+      - POST `/checkUser`
+      - POST `/update-password`
+      - POST `/update-email`
+      - GET `/user-profile` 🔒
+      - DELETE `/user-profile/:id` 🔒
+      - PATCH `/user-profile/:id/enable` 🔒
+
+      #### Admin
+      - POST `/admin-login`
+      - POST `/register-admin`
+
+      #### Clients & User Management
+      - GET `/clients`
+      - PATCH `/user/:id`
+      - PATCH `/user` 🔒
+      - DELETE `/user/:id`
+      - GET `/user/:id`
+
+      #### Properties
+      - GET `/getAllProperties`
+      - GET `/PlanpoProperties`
+      - GET `/getAllPropertiesCoordinates` 🔒
+      - GET `/properties/by-polygon` 🔒 📎
+      - GET `/propertyById/:id` 🔒
+      - GET `/property/:id` 🔒
+      - POST `/createProperty`
+      - PUT `/updateProperty/:id`
+      - DELETE `/deleteProperty/:id`
+      - GET `/getPropertiesByAddress`
+      - PUT `/updateStripeCustomerId` 🔒
+      - GET `/properties/filterByCityAndZip`
+      - GET `/properties/basicFilters`
+      - GET `/properties/cashflow/:id`
+      - GET `/properties/firstTimeHomeBuyer/:id`
+      - GET `/properties/fixAndFlip/:id`
+      - GET `/properties/house-hack/:id`
+
+      #### Property Questionnaires
+      - GET `/property-questionnaires` 🔒
+      - GET `/property-questionnaires/:id` 🔒
+      - GET `/property-questionnaires/prefilled/:id` 🔒
+      - POST `/property-questionnaires` 🔒 📎
+      - PATCH `/property-questionnaires/:id` 🔒 📎
+      - DELETE `/property-questionnaires/:id` 🔒
+
+      #### Onboarding Questionnaire
+      - GET `/questionnaire` 🔒
+      - GET `/questions` 🔒
+      - POST `/questionnaire` 🔒 📎
+      - PATCH `/questionnaire` 🔒 📎
+      - DELETE `/questionnaire` 🔒
+
+      #### User Liked Properties
+      - POST `/user-likes` 🔒
+      - DELETE `/user-likes/:id` 🔒
+      - PUT `/user-likes/:id` 🔒
+      - GET `/user-likes` 🔒
+
+      #### Buy House
+      - POST `/buy-house` 🔒
+      - PUT `/buy-house/:id` 🔒
+      - DELETE `/buy-house/:id` 🔒
+      - GET `/buy-house` 🔒
+
+      #### Buy Property
+      - POST `/buy-property` 🔒
+      - GET `/buy-property` 🔒
+      - GET `/buy-property/:id` 🔒
+      - PUT `/buy-property/:id` 🔒
+      - DELETE `/buy-property/:id` 🔒
+
+      #### Showings / Request Tour
+      - GET `/showings` 🔒
+      - POST `/showings` 🔒
+      - GET `/showings/:id` 🔒
+      - PUT `/showings/:id` 🔒 (cancel)
+      - POST `/reschedule-showing` 🔒
+      - POST `/updateRequestTourWebhook`
+      - POST `/showing-message` 🔒
+
+      #### AI Assistant
+      - POST `/ai-assistant` 🔒 📎
+      - POST `/aiconversation` 🔒 📎 🔁
+      - WebSocket (Prod): `wss://api.thehouserapp.com/?token=YOUR_JWT` (not monitored here)
+      - WebSocket (Stage): `ws://54.162.155.98:3001/?token=YOUR_JWT` (not monitored here)
+
+      #### Audio
+      - POST `/audio` 📎
+      - GET `/signedaudio`
+
+      #### Stripe / Billing
+      - POST `/stripe/webhook` (Stripe only; expects raw body)
+      - POST `/stripe/checkout-session` 🔒
+      - POST `/stripe/downgrade` 🔒
+      - GET `/credits` 🔒
+      - POST `/credits` 🔒
+      - POST `/credits/deduct` 🔒
+      - POST `/stripe/customer-portal` 🔒
+      - GET `/subscription-plans` 🔒
+      - POST `/:userId/account`
+      - POST `/:userId/account/payment`
+      - GET `/:userId/paymentMethods`
+      - DELETE `/:userId/paymentMethods/:paymentMethodId`
+      - GET `/:userId/customer/session`
+      - GET `/:userId/customer/subscriptions`
+      - POST `/:userId/account/setupPayment`
+      - PUT `/updateStripeCustomerId`
+
+      #### Queries
+      - POST `/createQuery`
+      - GET `/getQueries`
   
   # Add navigation links:
   navbar:
     - title: Status
       href: /
+      - title: Endpoint Directory
+        href: /#endpoint-directory
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
     - title: Support
