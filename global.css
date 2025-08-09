@@ -201,3 +201,89 @@ article .graph {
   opacity: var(--graph-opacity);
   filter: var(--graph-filter);
 }
+
+/* --- Custom card redesign for Live Status grid --- */
+/* Layout */
+.live-status {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Card base */
+.live-status article {
+  border-radius: 0.9rem;
+  border: 1px solid var(--card-border-color);
+  padding: 1rem 1rem 0.9rem 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.01) 100%), var(--card-background-color);
+  min-height: 140px;
+  overflow: hidden;
+  border-left: none;
+}
+
+/* Title row */
+.live-status article h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.live-status article .icon {
+  height: 1.1rem;
+  width: 1.1rem;
+  transform: translateY(-1px);
+}
+
+/* Small status dot */
+.live-status article::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--up-border-left-color);
+  box-shadow: 0 0 0 4px rgba(32, 191, 107, 0.15);
+}
+.live-status article.degraded::before {
+  background: var(--degraded-border-left-color);
+  box-shadow: 0 0 0 4px rgba(247, 183, 49, 0.15);
+}
+.live-status article.down::before,
+.live-status article.down-active::before {
+  background: var(--down-border-left-color);
+  box-shadow: 0 0 0 4px rgba(235, 59, 90, 0.18);
+}
+
+/* Mini chart background (provided by component) */
+.live-status article.graph {
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem bottom 0.75rem !important;
+  background-size: 58% auto !important;
+}
+
+/* Inline metric chip */
+.live-status article .data {
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Subtle labels */
+.live-status article p,
+.live-status article div {
+  opacity: 0.95;
+}
+
+/* Make incident/scheduled lists keep legacy look */
+section:not(.live-status) > article.down,
+section:not(.live-status) > article.degraded,
+section:not(.live-status) > article.up {
+  border-left-width: 0.2rem;
+}
