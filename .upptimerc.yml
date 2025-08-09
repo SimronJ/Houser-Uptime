@@ -247,11 +247,11 @@ workflowSchedule:
 status-website:
   baseUrl: /Houser-Uptime
   name: Houser API Status
-    
-    # Add these for better branding:
-    logoUrl: https://yourcompany.com/logo.png  # Optional: your company logo
-    introTitle: "**Houser App** System Status"
-    introMessage: |
+  
+  # Add these for better branding:
+  logoUrl: https://yourcompany.com/logo.png  # Optional: your company logo
+  introTitle: "**Houser App** System Status"
+  introMessage: |
       Real-time monitoring of our production and staging APIs, plus key integrations.
 
       ### Legend
@@ -394,12 +394,12 @@ status-website:
   navbar:
     - title: Status
       href: /
-      - title: Endpoint Directory
-        href: /#endpoint-directory
+    - title: Endpoint Directory
+      href: /#endpoint-directory
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
     - title: Support
       href: https://support.thehouserapp.com  # Your support page
-    
+  
   # Optional: Custom theme
   theme: dark  # or "light"
