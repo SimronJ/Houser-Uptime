@@ -1,7 +1,7 @@
-url: http://54.162.155.98:3001/getPropertiesByAddress
-status: down
+url: http://54.162.155.98:3001/getPropertiesByAddress?address=123%20Main%20St
+status: up
 code: 400
-responseTime: 20
-lastUpdated: 2025-08-08T23:18:52.658Z
+responseTime: 324
+lastUpdated: 2025-08-09T21:13:01.924Z
 startTime: 2025-08-08T18:48:44.628Z
 generator: Upptime <https://github.com/upptime/upptime>
