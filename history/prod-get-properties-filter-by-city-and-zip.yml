@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/filterByCityAndZip?city=Plano
 status: up
 code: 200
-responseTime: 4672
-lastUpdated: 2025-08-10T23:18:42.502Z
+responseTime: 4206
+lastUpdated: 2025-08-11T23:18:09.186Z
 startTime: 2025-08-08T18:48:44.997Z
 generator: Upptime <https://github.com/upptime/upptime>
