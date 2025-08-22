@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/user/1
 status: up
-code: 400
-responseTime: 8
-lastUpdated: 2025-08-21T23:16:57.344Z
+code: 404
+responseTime: 22
+lastUpdated: 2025-08-22T23:16:54.976Z
 startTime: 2025-08-08T18:48:16.407Z
 generator: Upptime <https://github.com/upptime/upptime>
