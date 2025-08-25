@@ -23,18 +23,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-user-roles",
     "status": "down",
-    "uptime": "99.49%",
-    "uptimeDay": "91.32%",
-    "uptimeWeek": "98.76%",
-    "uptimeMonth": "99.49%",
-    "uptimeYear": "99.49%",
+    "uptime": "99.41%",
+    "uptimeDay": "89.83%",
+    "uptimeWeek": "98.55%",
+    "uptimeMonth": "99.41%",
+    "uptimeYear": "99.41%",
     "time": 137,
     "timeDay": 125,
     "timeWeek": 121,
     "timeMonth": 137,
     "timeYear": 137,
     "dailyMinutesDown": {
-      "2025-08-25": 125
+      "2025-08-25": 146
     }
   },
   {
@@ -169,18 +169,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-clients",
     "status": "down",
-    "uptime": "18.59%",
-    "uptimeDay": "91.42%",
+    "uptime": "18.57%",
+    "uptimeDay": "89.93%",
     "uptimeWeek": "45.56%",
-    "uptimeMonth": "18.59%",
-    "uptimeYear": "18.59%",
+    "uptimeMonth": "18.57%",
+    "uptimeYear": "18.57%",
     "time": 43,
     "timeDay": 55,
     "timeWeek": 54,
     "timeMonth": 43,
     "timeYear": 43,
     "dailyMinutesDown": {
-      "2025-08-25": 123,
+      "2025-08-25": 145,
       "2025-08-22": 957,
       "2025-08-21": 1440,
       "2025-08-20": 1440,
@@ -222,18 +222,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-user-1",
     "status": "up",
-    "uptime": "99.83%",
-    "uptimeDay": "97.05%",
-    "uptimeWeek": "99.58%",
-    "uptimeMonth": "99.83%",
-    "uptimeYear": "99.83%",
+    "uptime": "99.81%",
+    "uptimeDay": "96.78%",
+    "uptimeWeek": "99.54%",
+    "uptimeMonth": "99.81%",
+    "uptimeYear": "99.81%",
     "time": 432,
     "timeDay": 5422,
     "timeWeek": 1390,
     "timeMonth": 432,
     "timeYear": 432,
     "dailyMinutesDown": {
-      "2025-08-25": 43
+      "2025-08-25": 47
     }
   },
   {
@@ -263,18 +263,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-get-all-properties",
     "status": "down",
-    "uptime": "93.22%",
-    "uptimeDay": "93.68%",
-    "uptimeWeek": "99.10%",
-    "uptimeMonth": "93.22%",
-    "uptimeYear": "93.22%",
+    "uptime": "93.14%",
+    "uptimeDay": "92.19%",
+    "uptimeWeek": "98.88%",
+    "uptimeMonth": "93.14%",
+    "uptimeYear": "93.14%",
     "time": 39,
     "timeDay": 77,
     "timeWeek": 52,
     "timeMonth": 39,
     "timeYear": 39,
     "dailyMinutesDown": {
-      "2025-08-25": 91,
+      "2025-08-25": 112,
       "2025-08-09": 1273,
       "2025-08-08": 312
     }
@@ -303,18 +303,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-planpo-properties",
     "status": "down",
-    "uptime": "99.51%",
-    "uptimeDay": "91.68%",
-    "uptimeWeek": "98.81%",
-    "uptimeMonth": "99.51%",
-    "uptimeYear": "99.51%",
+    "uptime": "99.43%",
+    "uptimeDay": "90.19%",
+    "uptimeWeek": "98.60%",
+    "uptimeMonth": "99.43%",
+    "uptimeYear": "99.43%",
     "time": 6668,
     "timeDay": 8957,
     "timeWeek": 6260,
     "timeMonth": 6668,
     "timeYear": 6668,
     "dailyMinutesDown": {
-      "2025-08-25": 120
+      "2025-08-25": 142
     }
   },
   {
@@ -488,18 +488,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-get-properties-by-address",
     "status": "down",
-    "uptime": "93.41%",
-    "uptimeDay": "96.90%",
-    "uptimeWeek": "99.56%",
-    "uptimeMonth": "93.41%",
-    "uptimeYear": "93.41%",
+    "uptime": "93.32%",
+    "uptimeDay": "95.41%",
+    "uptimeWeek": "99.34%",
+    "uptimeMonth": "93.32%",
+    "uptimeYear": "93.32%",
     "time": 1076,
     "timeDay": 12702,
     "timeWeek": 3307,
     "timeMonth": 1076,
     "timeYear": 1076,
     "dailyMinutesDown": {
-      "2025-08-25": 45,
+      "2025-08-25": 66,
       "2025-08-09": 1273,
       "2025-08-08": 311
     }
@@ -531,18 +531,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-properties-filter-by-city-and-zip",
     "status": "degraded",
-    "uptime": "93.24%",
-    "uptimeDay": "94.00%",
-    "uptimeWeek": "99.14%",
-    "uptimeMonth": "93.24%",
-    "uptimeYear": "93.24%",
+    "uptime": "93.16%",
+    "uptimeDay": "92.51%",
+    "uptimeWeek": "98.93%",
+    "uptimeMonth": "93.16%",
+    "uptimeYear": "93.16%",
     "time": 2838,
     "timeDay": 7889,
     "timeWeek": 3576,
     "timeMonth": 2838,
     "timeYear": 2838,
     "dailyMinutesDown": {
-      "2025-08-25": 86,
+      "2025-08-25": 108,
       "2025-08-09": 1273,
       "2025-08-08": 311
     }
@@ -571,18 +571,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-properties-basic-filters",
     "status": "down",
-    "uptime": "81.35%",
+    "uptime": "81.28%",
     "uptimeDay": "7.46%",
-    "uptimeWeek": "54.28%",
-    "uptimeMonth": "81.35%",
-    "uptimeYear": "81.35%",
+    "uptimeWeek": "54.07%",
+    "uptimeMonth": "81.28%",
+    "uptimeYear": "81.28%",
     "time": 150,
     "timeDay": 138,
     "timeWeek": 117,
     "timeMonth": 150,
     "timeYear": 150,
     "dailyMinutesDown": {
-      "2025-08-25": 1245,
+      "2025-08-25": 1267,
       "2025-08-24": 1440,
       "2025-08-23": 1440,
       "2025-08-22": 483
@@ -611,19 +611,19 @@
     "url": "http://54.162.155.98:3001/properties/cashflow/1",
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-properties-cashflow-1",
-    "status": "up",
-    "uptime": "99.85%",
-    "uptimeDay": "97.48%",
-    "uptimeWeek": "99.64%",
-    "uptimeMonth": "99.85%",
-    "uptimeYear": "99.85%",
+    "status": "down",
+    "uptime": "99.83%",
+    "uptimeDay": "97.05%",
+    "uptimeWeek": "99.58%",
+    "uptimeMonth": "99.83%",
+    "uptimeYear": "99.83%",
     "time": 1037,
     "timeDay": 12788,
     "timeWeek": 3237,
     "timeMonth": 1037,
     "timeYear": 1037,
     "dailyMinutesDown": {
-      "2025-08-25": 36
+      "2025-08-25": 42
     }
   },
   {
@@ -650,18 +650,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-properties-first-time-home-buyer-1",
     "status": "down",
-    "uptime": "99.54%",
-    "uptimeDay": "92.09%",
-    "uptimeWeek": "98.87%",
-    "uptimeMonth": "99.54%",
-    "uptimeYear": "99.54%",
+    "uptime": "99.45%",
+    "uptimeDay": "90.60%",
+    "uptimeWeek": "98.66%",
+    "uptimeMonth": "99.45%",
+    "uptimeYear": "99.45%",
     "time": 34,
     "timeDay": 40,
     "timeWeek": 40,
     "timeMonth": 34,
     "timeYear": 34,
     "dailyMinutesDown": {
-      "2025-08-25": 114
+      "2025-08-25": 136
     }
   },
   {
@@ -688,18 +688,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-properties-fix-and-flip-1",
     "status": "down",
-    "uptime": "99.54%",
-    "uptimeDay": "92.17%",
-    "uptimeWeek": "98.88%",
-    "uptimeMonth": "99.54%",
-    "uptimeYear": "99.54%",
+    "uptime": "99.46%",
+    "uptimeDay": "90.68%",
+    "uptimeWeek": "98.67%",
+    "uptimeMonth": "99.46%",
+    "uptimeYear": "99.46%",
     "time": 408,
     "timeDay": 2747,
     "timeWeek": 1129,
     "timeMonth": 408,
     "timeYear": 408,
     "dailyMinutesDown": {
-      "2025-08-25": 113
+      "2025-08-25": 134
     }
   },
   {
@@ -725,19 +725,19 @@
     "url": "http://54.162.155.98:3001/properties/house-hack/1",
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-properties-house-hack-1",
-    "status": "up",
-    "uptime": "99.86%",
-    "uptimeDay": "97.55%",
-    "uptimeWeek": "99.65%",
-    "uptimeMonth": "99.86%",
-    "uptimeYear": "99.86%",
+    "status": "down",
+    "uptime": "99.85%",
+    "uptimeDay": "97.43%",
+    "uptimeWeek": "99.63%",
+    "uptimeMonth": "99.85%",
+    "uptimeYear": "99.85%",
     "time": 679,
     "timeDay": 8727,
     "timeWeek": 2223,
     "timeMonth": 679,
     "timeYear": 679,
     "dailyMinutesDown": {
-      "2025-08-25": 35
+      "2025-08-25": 37
     }
   },
   {
@@ -1232,18 +1232,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/54.162.155.98.ico",
     "slug": "staging-get-get-queries",
     "status": "down",
-    "uptime": "99.56%",
-    "uptimeDay": "92.46%",
-    "uptimeWeek": "98.92%",
-    "uptimeMonth": "99.56%",
-    "uptimeYear": "99.56%",
+    "uptime": "99.47%",
+    "uptimeDay": "90.97%",
+    "uptimeWeek": "98.71%",
+    "uptimeMonth": "99.47%",
+    "uptimeYear": "99.47%",
     "time": 56,
     "timeDay": 57,
     "timeWeek": 75,
     "timeMonth": 56,
     "timeYear": 56,
     "dailyMinutesDown": {
-      "2025-08-25": 108
+      "2025-08-25": 130
     }
   }
 ]
