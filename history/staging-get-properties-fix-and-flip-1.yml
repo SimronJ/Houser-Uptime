@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/properties/fixAndFlip/1
-status: down
-code: 500
-responseTime: 9
-lastUpdated: 2025-08-25T18:49:47.291Z
+status: up
+code: 404
+responseTime: 37
+lastUpdated: 2025-08-25T19:20:27.284Z
 startTime: 2025-08-08T18:48:48.335Z
 generator: Upptime <https://github.com/upptime/upptime>
