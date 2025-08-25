@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/PlanpoProperties
-status: up
-code: 200
-responseTime: 170
-lastUpdated: 2025-08-24T23:16:42.698Z
+status: down
+code: 500
+responseTime: 64
+lastUpdated: 2025-08-25T18:49:38.472Z
 startTime: 2025-08-08T18:48:34.079Z
 generator: Upptime <https://github.com/upptime/upptime>
