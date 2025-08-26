@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/properties/filterByCityAndZip?city=Plano
-status: up
+status: degraded
 code: 400
-responseTime: 14834
-lastUpdated: 2025-08-25T23:53:03.890Z
+responseTime: 17530
+lastUpdated: 2025-08-26T02:58:28.254Z
 startTime: 2025-08-08T18:48:45.359Z
 generator: Upptime <https://github.com/upptime/upptime>
