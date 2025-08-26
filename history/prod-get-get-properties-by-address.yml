@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/getPropertiesByAddress?address=123%20Main%20St
 status: up
 code: 400
-responseTime: 209
-lastUpdated: 2025-08-24T23:16:45.114Z
+responseTime: 299
+lastUpdated: 2025-08-26T23:16:17.730Z
 startTime: 2025-08-08T18:48:44.224Z
 generator: Upptime <https://github.com/upptime/upptime>
