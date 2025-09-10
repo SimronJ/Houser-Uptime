@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/fixAndFlip/1
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-09-10T04:58:29.545Z
+status: up
+code: 404
+responseTime: 53
+lastUpdated: 2025-09-10T05:51:06.291Z
 startTime: 2025-08-08T18:48:48.039Z
 generator: Upptime <https://github.com/upptime/upptime>
