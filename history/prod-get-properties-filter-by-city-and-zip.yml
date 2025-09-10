@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/filterByCityAndZip?city=Plano
-status: up
-code: 400
-responseTime: 729
-lastUpdated: 2025-09-10T16:58:15.951Z
+status: down
+code: 0
+responseTime: 0
+lastUpdated: 2025-09-10T17:17:16.860Z
 startTime: 2025-08-08T18:48:44.997Z
 generator: Upptime <https://github.com/upptime/upptime>
