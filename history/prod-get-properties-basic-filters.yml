@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/basicFilters
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-09-09T17:37:13.138Z
+status: up
+code: 200
+responseTime: 1775
+lastUpdated: 2025-09-10T01:38:30.205Z
 startTime: 2025-08-08T18:48:45.755Z
 generator: Upptime <https://github.com/upptime/upptime>
