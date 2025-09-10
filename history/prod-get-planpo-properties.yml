@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/PlanpoProperties
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-09-10T16:56:48.804Z
+status: up
+code: 200
+responseTime: 13064
+lastUpdated: 2025-09-10T17:14:05.559Z
 startTime: 2025-08-08T18:48:17.601Z
 generator: Upptime <https://github.com/upptime/upptime>
