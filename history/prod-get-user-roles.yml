@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/user-roles
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-09-11T05:40:31.052Z
+status: up
+code: 200
+responseTime: 18662
+lastUpdated: 2025-09-11T05:59:19.929Z
 startTime: 2025-08-08T18:48:12.291Z
 generator: Upptime <https://github.com/upptime/upptime>
