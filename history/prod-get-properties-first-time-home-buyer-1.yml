@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/firstTimeHomeBuyer/1
-status: up
-code: 404
-responseTime: 21324
-lastUpdated: 2025-09-11T17:32:55.272Z
+status: down
+code: 500
+responseTime: 81
+lastUpdated: 2025-09-11T18:26:17.147Z
 startTime: 2025-08-08T18:48:47.358Z
 generator: Upptime <https://github.com/upptime/upptime>
