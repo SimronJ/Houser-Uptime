@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/properties/cashflow/1
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-09-11T22:52:13.062Z
+status: up
+code: 404
+responseTime: 122
+lastUpdated: 2025-09-12T01:47:07.287Z
 startTime: 2025-08-08T18:48:46.715Z
 generator: Upptime <https://github.com/upptime/upptime>
