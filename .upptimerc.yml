@@ -88,12 +88,12 @@ sites:
     url: http://54.162.155.98:3001/property/1
     expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
 
-  - name: Prod - GET /getPropertiesByAddress
-    url: https://api.thehouserapp.com/getPropertiesByAddress?address=123%20Main%20St
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-  - name: Staging - GET /getPropertiesByAddress
-    url: http://54.162.155.98:3001/getPropertiesByAddress?address=123%20Main%20St
-    expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Prod - GET /getPropertiesByAddress
+  #   url: https://api.thehouserapp.com/getPropertiesByAddress?address=123%20Main%20St
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Staging - GET /getPropertiesByAddress
+  #   url: http://54.162.155.98:3001/getPropertiesByAddress?address=123%20Main%20St
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
 
   - name: Prod - GET /properties/filterByCityAndZip
     url: https://api.thehouserapp.com/properties/filterByCityAndZip?city=Plano
