@@ -38,12 +38,12 @@ sites:
     expectedStatusCodes: [200]
     maxResponseTime: 15000
 
-  - name: Prod - GET /user/1
-    url: https://api.thehouserapp.com/user/1
-    expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
-  - name: Staging - GET /user/1
-    url: http://54.162.155.98:3001/user/1
-    expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
+  # - name: Prod - GET /user/1
+  #   url: https://api.thehouserapp.com/user/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
+  # - name: Staging - GET /user/1
+  #   url: http://54.162.155.98:3001/user/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
 
   # ==== PROPERTIES ====
   - name: Prod - GET /getAllProperties
@@ -55,10 +55,10 @@ sites:
     expectedStatusCodes: [200, 201, 204, 400, 401, 403, 404]
     maxResponseTime: 15000
 
-  - name: Prod - GET /PlanpoProperties
-    url: https://api.thehouserapp.com/PlanpoProperties
-  - name: Staging - GET /PlanpoProperties
-    url: http://54.162.155.98:3001/PlanpoProperties
+  # - name: Prod - GET /PlanpoProperties
+  #   url: https://api.thehouserapp.com/PlanpoProperties
+  # - name: Staging - GET /PlanpoProperties
+  #   url: http://54.162.155.98:3001/PlanpoProperties
 
   - name: Prod - GET /getAllPropertiesCoordinates
     url: https://api.thehouserapp.com/getAllPropertiesCoordinates
@@ -95,19 +95,19 @@ sites:
   #   url: http://54.162.155.98:3001/getPropertiesByAddress?address=123%20Main%20St
   #   expectedStatusCodes: [200, 201, 204, 400, 404]
 
-  - name: Prod - GET /properties/filterByCityAndZip
-    url: https://api.thehouserapp.com/properties/filterByCityAndZip?city=Plano
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-    maxResponseTime: 15000
-  - name: Staging - GET /properties/filterByCityAndZip
-    url: http://54.162.155.98:3001/properties/filterByCityAndZip?city=Plano
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-    maxResponseTime: 15000
+  # - name: Prod - GET /properties/filterByCityAndZip
+  #   url: https://api.thehouserapp.com/properties/filterByCityAndZip?city=Plano
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  #   maxResponseTime: 15000
+  # - name: Staging - GET /properties/filterByCityAndZip
+  #   url: http://54.162.155.98:3001/properties/filterByCityAndZip?city=Plano
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  #   maxResponseTime: 15000
 
-  - name: Prod - GET /properties/basicFilters
-    url: https://api.thehouserapp.com/properties/basicFilters
-  - name: Staging - GET /properties/basicFilters
-    url: http://54.162.155.98:3001/properties/basicFilters
+  # - name: Prod - GET /properties/basicFilters
+  #   url: https://api.thehouserapp.com/properties/basicFilters
+  # - name: Staging - GET /properties/basicFilters
+  #   url: http://54.162.155.98:3001/properties/basicFilters
 
   - name: Prod - GET /properties/cashflow/1
     url: https://api.thehouserapp.com/properties/cashflow/1
