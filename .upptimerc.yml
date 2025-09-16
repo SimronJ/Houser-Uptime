@@ -109,33 +109,33 @@ sites:
   # - name: Staging - GET /properties/basicFilters
   #   url: http://54.162.155.98:3001/properties/basicFilters
 
-  - name: Prod - GET /properties/cashflow/1
-    url: https://api.thehouserapp.com/properties/cashflow/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-  - name: Staging - GET /properties/cashflow/1
-    url: http://54.162.155.98:3001/properties/cashflow/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Prod - GET /properties/cashflow/1
+  #   url: https://api.thehouserapp.com/properties/cashflow/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Staging - GET /properties/cashflow/1
+  #   url: http://54.162.155.98:3001/properties/cashflow/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
 
-  - name: Prod - GET /properties/firstTimeHomeBuyer/1
-    url: https://api.thehouserapp.com/properties/firstTimeHomeBuyer/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-  - name: Staging - GET /properties/firstTimeHomeBuyer/1
-    url: http://54.162.155.98:3001/properties/firstTimeHomeBuyer/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Prod - GET /properties/firstTimeHomeBuyer/1
+  #   url: https://api.thehouserapp.com/properties/firstTimeHomeBuyer/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Staging - GET /properties/firstTimeHomeBuyer/1
+  #   url: http://54.162.155.98:3001/properties/firstTimeHomeBuyer/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
 
-  - name: Prod - GET /properties/fixAndFlip/1
-    url: https://api.thehouserapp.com/properties/fixAndFlip/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-  - name: Staging - GET /properties/fixAndFlip/1
-    url: http://54.162.155.98:3001/properties/fixAndFlip/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Prod - GET /properties/fixAndFlip/1
+  #   url: https://api.thehouserapp.com/properties/fixAndFlip/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Staging - GET /properties/fixAndFlip/1
+  #   url: http://54.162.155.98:3001/properties/fixAndFlip/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
 
-  - name: Prod - GET /properties/house-hack/1
-    url: https://api.thehouserapp.com/properties/house-hack/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
-  - name: Staging - GET /properties/house-hack/1
-    url: http://54.162.155.98:3001/properties/house-hack/1
-    expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Prod - GET /properties/house-hack/1
+  #   url: https://api.thehouserapp.com/properties/house-hack/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
+  # - name: Staging - GET /properties/house-hack/1
+  #   url: http://54.162.155.98:3001/properties/house-hack/1
+  #   expectedStatusCodes: [200, 201, 204, 400, 404]
 
   # ==== PROPERTY QUESTIONNAIRES ====
   - name: Prod - GET /property-questionnaires
@@ -301,7 +301,6 @@ status-website:
 
       #### Properties
       - GET `/getAllProperties`
-      - GET `/PlanpoProperties`
       - GET `/getAllPropertiesCoordinates` 🔒
       - GET `/properties/by-polygon` 🔒 📎
       - GET `/propertyById/:id` 🔒
@@ -309,12 +308,13 @@ status-website:
       - POST `/createProperty`
       - PUT `/updateProperty/:id`
       - DELETE `/deleteProperty/:id`
-      - GET `/getPropertiesByAddress`
+      # - GET `/PlanpoProperties`
+      # - GET `/getPropertiesByAddress`
       - PUT `/updateStripeCustomerId` 🔒
-      - GET `/properties/filterByCityAndZip`
-      - GET `/properties/basicFilters`
-      - GET `/properties/cashflow/:id`
-      - GET `/properties/firstTimeHomeBuyer/:id`
+      # - GET `/properties/filterByCityAndZip`
+      # - GET `/properties/basicFilters`
+      # - GET `/properties/cashflow/:id`
+      # - GET `/properties/firstTimeHomeBuyer/:id`
       - GET `/properties/fixAndFlip/:id`
       - GET `/properties/house-hack/:id`
 
@@ -358,11 +358,11 @@ status-website:
       - GET `/showings/:id` 🔒
       - PUT `/showings/:id` 🔒 (cancel)
       - POST `/reschedule-showing` 🔒
-      - POST `/updateRequestTourWebhook`
-      - POST `/showing-message` 🔒
+      # - POST `/updateRequestTourWebhook`
+      # - POST `/showing-message` 🔒
 
       #### AI Assistant
-      - POST `/ai-assistant` 🔒 📎
+      # - POST `/ai-assistant` 🔒 📎
       - POST `/aiconversation` 🔒 📎 🔁
       - WebSocket (Prod): `wss://api.thehouserapp.com/?token=YOUR_JWT` (not monitored here)
       - WebSocket (Stage): `ws://54.162.155.98:3001/?token=YOUR_JWT` (not monitored here)
@@ -380,14 +380,14 @@ status-website:
       - POST `/credits/deduct` 🔒
       - POST `/stripe/customer-portal` 🔒
       - GET `/subscription-plans` 🔒
-      - POST `/:userId/account`
-      - POST `/:userId/account/payment`
-      - GET `/:userId/paymentMethods`
-      - DELETE `/:userId/paymentMethods/:paymentMethodId`
-      - GET `/:userId/customer/session`
-      - GET `/:userId/customer/subscriptions`
-      - POST `/:userId/account/setupPayment`
-      - PUT `/updateStripeCustomerId`
+      # - POST `/:userId/account`
+      # - POST `/:userId/account/payment`
+      # - GET `/:userId/paymentMethods`
+      # - DELETE `/:userId/paymentMethods/:paymentMethodId`
+      # - GET `/:userId/customer/session`
+      # - GET `/:userId/customer/subscriptions`
+      # - POST `/:userId/account/setupPayment`
+      # - PUT `/updateStripeCustomerId`
 
       #### Queries
       - POST `/createQuery`
