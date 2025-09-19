@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/user-roles
-status: down
-code: 400
-responseTime: 725
-lastUpdated: 2025-09-19T08:20:52.935Z
+status: up
+code: 200
+responseTime: 158
+lastUpdated: 2025-09-19T08:44:07.178Z
 startTime: 2025-08-08T18:48:12.842Z
 generator: Upptime <https://github.com/upptime/upptime>
