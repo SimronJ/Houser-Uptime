@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/getAllProperties?minLatitude=33.0000&minLongitude=-97.0000&maxLatitude=33.0100&maxLongitude=-96.9900&pageSize=1
-status: down
-code: 502
-responseTime: 3
-lastUpdated: 2025-09-23T17:40:29.938Z
+status: up
+code: 404
+responseTime: 7
+lastUpdated: 2025-09-23T19:56:54.579Z
 startTime: 2025-08-08T18:48:16.764Z
 generator: Upptime <https://github.com/upptime/upptime>
