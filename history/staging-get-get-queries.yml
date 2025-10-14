@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/getQueries
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-10-14T11:29:58.145Z
+status: up
+code: 200
+responseTime: 97
+lastUpdated: 2025-10-14T11:39:36.755Z
 startTime: 2025-08-08T18:49:08.678Z
 generator: Upptime <https://github.com/upptime/upptime>
