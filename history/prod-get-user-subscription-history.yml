@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/user-subscription-history
 status: up
-code: 404
-responseTime: 37
-lastUpdated: 2025-11-05T17:16:08.884Z
+code: 401
+responseTime: 61
+lastUpdated: 2025-11-05T23:17:29.376Z
 startTime: 2025-08-08T18:48:13.897Z
 generator: Upptime <https://github.com/upptime/upptime>
