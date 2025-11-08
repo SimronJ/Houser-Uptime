@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/clients?page=1&limit=1
-status: down
-code: 502
-responseTime: 37
-lastUpdated: 2025-11-07T23:16:35.884Z
+status: up
+code: 200
+responseTime: 86
+lastUpdated: 2025-11-08T07:16:08.141Z
 startTime: 2025-08-08T18:48:15.210Z
 generator: Upptime <https://github.com/upptime/upptime>
