@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/property/1
-status: down
-code: 502
-responseTime: 37
-lastUpdated: 2025-11-07T23:16:38.384Z
+status: up
+code: 401
+responseTime: 73
+lastUpdated: 2025-11-08T07:16:20.351Z
 startTime: 2025-08-08T18:48:43.567Z
 generator: Upptime <https://github.com/upptime/upptime>
