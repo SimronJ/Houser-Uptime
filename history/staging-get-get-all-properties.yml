@@ -1,7 +1,7 @@
 url: http://54.162.155.98:3001/getAllProperties?minLatitude=33.0000&minLongitude=-97.0000&maxLatitude=33.0100&maxLongitude=-96.9900&pageSize=1
 status: up
 code: 404
-responseTime: 67
-lastUpdated: 2026-01-21T23:25:11.277Z
+responseTime: 69
+lastUpdated: 2026-01-22T23:20:33.027Z
 startTime: 2025-08-08T18:48:17.223Z
 generator: Upptime <https://github.com/upptime/upptime>
