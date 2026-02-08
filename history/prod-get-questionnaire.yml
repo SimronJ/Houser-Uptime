@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/questionnaire
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2026-02-07T23:29:27.925Z
+status: up
+code: 401
+responseTime: 61
+lastUpdated: 2026-02-08T15:49:50.508Z
 startTime: 2025-08-08T18:48:51.325Z
 generator: Upptime <https://github.com/upptime/upptime>
