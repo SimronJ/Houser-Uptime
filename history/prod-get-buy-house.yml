@@ -1,7 +1,7 @@
 url: https://api.thehouserapp.com/buy-house
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2026-02-07T23:29:30.725Z
+status: up
+code: 401
+responseTime: 61
+lastUpdated: 2026-02-08T15:49:57.532Z
 startTime: 2025-08-08T18:48:53.183Z
 generator: Upptime <https://github.com/upptime/upptime>
